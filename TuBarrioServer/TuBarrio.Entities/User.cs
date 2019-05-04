@@ -8,7 +8,7 @@ namespace TuBarrio.Entities
 {
     public class User
     {
-        public int id;
+        public int Id { get; set; }
         private string name;
         private string surname;
         private string email;
@@ -21,14 +21,14 @@ namespace TuBarrio.Entities
         public string Token { get; set; }
         public string DeviceNotificactionToken { get; set; }
         public DateTime CreatedOn { get; set; }
-        public int ProfileFileId { get; set; }
+        public File ProfileImage { get; set; }
 
         public User()
         {
 
         }
 
-        public User (string name, string surname, string email, string phone, string password, int profileFileId)
+        public User (string name, string surname, string email, string phone, string password, File profileImage)
         {
             Name = name;
             Surname = surname;
@@ -37,7 +37,7 @@ namespace TuBarrio.Entities
             Token = "";
             DeviceNotificactionToken = "";
             Password = password;
-            ProfileFileId = profileFileId;
+            ProfileImage = profileImage;
             CreatedOn = DateTime.Now;
         }
 
